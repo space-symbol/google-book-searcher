@@ -1,0 +1,82 @@
+.BookDetails{
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    overflow: auto;
+
+    .imageWrapper {
+        height: max-content;
+        align-items: start;
+        align-self: start;
+        padding: 2.5em 1.5em;
+        background: #f4f2f2;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+
+        .img {
+            object-fit: contain;
+            border: none;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    .infoContainer {
+        align-self: start;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 2.5em 1.5em;
+        max-width: 100%;
+
+        .categories {
+            text-decoration: underline;
+            min-height: 0.8em;
+
+        }
+
+        .categories, .authors {
+            color: var(--secondary-color);
+            font-size: 0.8em;
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 1.2em;
+            overflow: hidden;
+        }
+
+        .description {
+            padding: 0.5em;
+            font-weight: 600;
+            border: 1px solid var(--secondary-color);
+            word-break: break-word;
+            min-height: 200px;
+        }
+
+        .empty {
+            display: flex;
+            font-weight: 400;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.back {
+    height: 50px;
+}
